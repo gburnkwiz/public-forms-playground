@@ -6,7 +6,7 @@
 
 -   Fork & Clone the repository 
 
--   Add the file into the templates folder 
+-   Add the file into the dev/templates folder 
 
 -   Clean up internal names (make sure all names are logical, use lower camel case when naming e.g.  firstName) 
 
