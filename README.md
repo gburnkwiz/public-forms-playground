@@ -16,10 +16,14 @@
 
     -   You also have the option of including a category property. This would allow you to either add it to a larger group or make a new category. Then when you filter the templates on the site, it will appear with its group. 
 
--   Submit a pull request with your changes. It will either be approved or you might get some comments with things to change before it can be approved.  
+-   Submit a pull request with your changes.
+  
+-   Once the pull request has been approved, switch the KWizCom environment picker to "development" and test your new templates
 
 -   If you do see some errors when trying to load the templates , here is what they might mean:  
 
     -   "Template file not found" - The fileName did not match a file stored in the templates folder 
 
     -   "Template JSON structure is invalid, check documentation for details" - The template you uploaded is not of a valid public forms template type.
+
+- If your templates work to your satisfaction, create a new PR and copy you changes into the main folder
