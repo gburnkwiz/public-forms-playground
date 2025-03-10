@@ -5,5 +5,6 @@
     { "title": "Job safety", "description": "Log safety concerns on your job site", "fileName": "job-safety.json", "category": "Worksite", "version": "v1" },
     { "title": "Insurance Accident Template", "description": "Report collisions to your insurance provider", "fileName": "insurance-accident-report.json", "category": "Automotive", "version": "v1"},
     { "title": "Site Visit", "description": "Report on Site Updates and Safety Hazards", "fileName": "site-visit.json", "category": "Worksite", "version": "v1"},
-    { "title": "Patient Intake Form Template", "description": "Receive patient information before a doctors appointment", "fileName": "patient-intake.json", "category": "Healthcare", "version": "v1"}
+    { "title": "Patient Intake Form Template", "description": "Receive patient information before a doctors appointment", "fileName": "patient-intake.json", "category": "Healthcare", "version": "v1"},
+    { "title": "anotha form", "description": "Receive patient information before a doctors appointment", "fileName": "anotha.json", "category": "Healthcare", "version": "v1"}
 ]
