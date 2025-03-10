@@ -1,5 +1,5 @@
 [
-    { "title": "Contact form", "description": "A simple 'contact us' form", "fileName": "contact-us.json", "category": "Outreach", "version": "v1"},
+    { "title": "Contact form", "description": "A simple 'contact us' form", "fileName": "notavalidfile", "category": "Outreach", "version": "v1"},
     { "title": "Job application", "description": "Allow candidates to submit CVs", "fileName": "job-application.json", "category": "Outreach", "version": "v1"},
     { "title": "Car rental", "description": "Car rental inspection form", "fileName": "car-rental.json", "category": "Automotive", "version": "v1"},
     { "title": "Job safety", "description": "Log safety concerns on your job site", "fileName": "job-safety.json", "category": "Worksite", "version": "v1" },
