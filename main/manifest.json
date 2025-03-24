@@ -7,5 +7,4 @@
     { "title": "Site Visit", "description": "Report on Site Updates and Safety Hazards", "fileName": "site-visit.json", "category": "Worksite", "version": "v1"},
     { "title": "Patient Intake Form Template", "description": "Receive patient information before a doctors appointment", "fileName": "patient-intake.json", "category": "Healthcare", "version": "v1"},
     { "title": "anotha form", "description": "Receive patient information before a doctors appointment", "fileName": "anotha.json", "category": "Sports", "version": "v1"}
-    {}
 ]
