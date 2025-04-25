@@ -1,10 +1,16 @@
 [
-    { "title": "Contact form", "description": "A simple 'contact us' form", "fileName": "notavalidfile", "category": "Outreach", "version": "v1"},
-    { "title": "Job application", "description": "Allow candidates to submit CVs", "fileName": "job-application.json", "category": "Outreach", "version": "v1"},
-    { "title": "Car rental", "description": "Car rental inspection form", "fileName": "car-rental.json", "category": "Automotive", "version": "v1"},
-    { "title": "Job safety", "description": "Log safety concerns on your job site", "fileName": "job-safety.json", "category": "Worksite", "version": "v1" },
-    { "title": "Insurance Accident Template", "description": "Report collisions to your insurance provider", "fileName": "insurance-accident-report.json", "category": "Automotive", "version": "v1"},
-    { "title": "Site Visit", "description": "Report on Site Updates and Safety Hazards", "fileName": "site-visit.json", "category": "Worksite", "version": "v1"},
-    { "title": "Patient Intake Form Template", "description": "Receive patient information before a doctors appointment", "fileName": "patient-intake.json", "category": "Healthcare", "version": "v1"},
-    { "title": "anotha form", "description": "Receive patient information before a doctors appointment", "fileName": "anotha.json", "category": "Sports", "version": "v1"}
+    { "title": "Contact form", "description": "A simple 'contact us' form", "fileName": "contact-us.json", "category": "Outreach"},
+    { "title": "Job application", "description": "Allow candidates to submit CVs", "fileName": "job-application.json", "category": "Outreach"},
+    { "title": "Car rental", "description": "Car rental inspection form", "fileName": "car-rental.json", "category": "Automotive"},
+    { "title": "Job safety", "description": "Log safety concerns on your job site", "fileName": "job-safety.json", "category": "Worksite"},
+    { "title": "Insurance Accident Template", "description": "Report collisions to your insurance provider", "fileName": "insurance-accident-report.json", "category": "Automotive"},
+    { "title": "Site Visit", "description": "Report on Site Updates and Safety Hazards", "fileName": "site-visit.json", "category": "Worksite"},
+    { "title": "Patient Intake Form Template", "description": "Receive patient information before a doctors appointment", "fileName": "patient-intake.json", "category": "Healthcare"},
+    { "title": "Bug Reporting Template", "description": "Report and categorize bugs", "fileName": "bug-reporting.json", "category": "Office"},
+    { "title": "Customer Feedback Template", "description": "Get feedback from customers on products", "fileName": "customer-feedback.json", "category": "Outreach"},
+    { "title": "Market Research Template", "description": "Survey potential customers on your product", "fileName": "market-research.json", "category": "Outreach"},
+    { "title": "Incident Reporting Template", "description": "Report Workplace Incidents", "fileName": "incident-reporting.json", "category": "Office"},
+    { "title": "Time Off Request Template", "description": "Allow employees to request time off", "fileName": "time-off-request.json", "category": "Office"}, 
+    { "title": "Employee Onboarding Form Template", "description": "Onboard new employees", "fileName": "employee-onboarding.json", "category": "Office"},
+    { "title": "Employee Satisfaction Form Template", "description": "Gauge the satisfaction of current employees", "fileName": "employee-satisfaction.json", "category": "Office"}
 ]
