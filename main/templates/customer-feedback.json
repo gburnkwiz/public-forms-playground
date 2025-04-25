@@ -1,0 +1,199 @@
+{
+  "layout": {
+    "steps": [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Customer Info (Optional)</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "firstName",
+                  "mode": "singleline",
+                  "type": "text"
+                },
+                "title": "Full Name ",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "email",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "email"
+                    }
+                  ]
+                },
+                "title": "Email ",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "cellNumber",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "phone"
+                    }
+                  ]
+                },
+                "title": "Cell Number ",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "workDuration",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Less than a year",
+                      "value": "Less than a year"
+                    },
+                    {
+                      "key": "1-5 Years",
+                      "value": "1-5 Years"
+                    },
+                    {
+                      "key": "5+ Years",
+                      "value": "5+ Years"
+                    }
+                  ],
+                  "type": "choice"
+                },
+                "title": "How long has your organization been a customer of our company? ",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Customer Feedback</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "productUsed",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Product A",
+                      "value": "Product A"
+                    },
+                    {
+                      "key": "Product B",
+                      "value": "Product B"
+                    },
+                    {
+                      "key": "Product C",
+                      "value": "Product C"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Product Used",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "satisfactionLevel",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Very Satisfied",
+                      "value": "Very Satisfied"
+                    },
+                    {
+                      "key": "Satisfied",
+                      "value": "Satisfied"
+                    },
+                    {
+                      "key": "Neutral",
+                      "value": "Neutral"
+                    },
+                    {
+                      "key": "Disappointed",
+                      "value": "Disappointed"
+                    },
+                    {
+                      "key": "Very Disappointed",
+                      "value": "Very Disappointed"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Satisfaction Level",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "likedText",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "What did you like about the product?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "didntLikeText",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "What didn't you like about the product?",
+                "type": "column"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": "Customer Feedback Form"
+  },
+  "onSubmitMessage": "Your request has been submitted."
+}
