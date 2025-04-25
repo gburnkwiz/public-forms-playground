@@ -1,4 +1,5 @@
 {
+  "schemaVersion": "1",
   "layout": {
     "title": "Insurance Accident Report",
     "steps": [
@@ -137,9 +138,9 @@
             "cells": [
               {
                 "type": "html",
-                "html": "",
+                "html": "I verify that I have read the content above and that the entered driver information is accurate",
                 "info": {
-                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                  "requiredRead": true
                 }
               }
             ]
@@ -245,7 +246,7 @@
                 "type": "column",
                 "info": {
                   "internalName": "vehicleIDNum",
-                  "type": "number",
+                  "type": "text",
                   "validations": [
                     {
                       "name": "required"
@@ -258,10 +259,10 @@
           {
             "cells": [
               {
-                "html": "",
+                "html": "I verify that I have read the content above and that the entered insured vehicle information is accurate",
                 "type": "html",
                 "info": {
-                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                  "requiredRead": true
                 }
               }
             ]
@@ -421,10 +422,10 @@
           {
             "cells": [
               {
-                "html": "",
+                "html": "I verify that I have read the content above and that the entered involved parties information is accurate",
                 "type": "html",
                 "info": {
-                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                  "requiredRead": true
                 }
               }
             ]
@@ -491,24 +492,24 @@
                   "type": "choice",
                   "options": [
                     {
-                      "key": "Choice A",
-                      "value": "Choice A"
+                      "key": "Clear",
+                      "value": "Clear"
                     },
                     {
-                      "key": "Choice B",
-                      "value": "Choice B"
+                      "key": "Overcast",
+                      "value": "Overcast"
                     },
                     {
-                      "key": "Choice C",
-                      "value": "Choice C"
+                      "key": "Snowing",
+                      "value": "Snowing"
                     },
                     {
-                      "key": "Choice D",
-                      "value": "Choice D"
+                      "key": "Raining",
+                      "value": "Raining"
                     },
                     {
-                      "key": "Choice E",
-                      "value": "Choice E"
+                      "key": "High Winds",
+                      "value": "High Winds"
                     }
                   ],
                   "validations": [
@@ -519,31 +520,23 @@
                 }
               },
               {
-                "title": "Road Conditions",
+                "title": "Traffic Conditions",
                 "type": "column",
                 "info": {
-                  "internalName": "roadConditions",
+                  "internalName": "trafficConditions",
                   "type": "choice",
                   "options": [
                     {
-                      "key": "Choice A",
-                      "value": "Choice A"
+                      "key": "Light",
+                      "value": "Light"
                     },
                     {
-                      "key": "Choice B",
-                      "value": "Choice B"
+                      "key": "Average",
+                      "value": "Average"
                     },
                     {
-                      "key": "Choice C",
-                      "value": "Choice C"
-                    },
-                    {
-                      "key": "Choice D",
-                      "value": "Choice D"
-                    },
-                    {
-                      "key": "Choice E",
-                      "value": "Choice E"
+                      "key": "Heavy",
+                      "value": "Heavy"
                     }
                   ],
                   "validations": [
@@ -599,7 +592,7 @@
                 },
                 "conditions": [
                   {
-                    "field": "Witnesses",
+                    "field": "witnesses",
                     "operator": "is",
                     "value": "true"
                   }
@@ -610,11 +603,12 @@
           {
             "cells": [
               {
-                "title": "Witness phone number",
+                "title": "Witness Contact Info",
                 "type": "column",
                 "info": {
-                  "type": "number",
-                  "internalName": "witnessPhoneNumber",
+                  "type": "text",
+                  "internalName": "witnessContactInfo",
+                  "mode": "multiline",
                   "validations": [
                     {
                       "name": "phone"
@@ -623,27 +617,7 @@
                 },
                 "conditions": [
                   {
-                    "field": "Witnesses",
-                    "operator": "is",
-                    "value": "true"
-                  }
-                ]
-              },
-              {
-                "title": "Witness email",
-                "type": "column",
-                "info": {
-                  "type": "text",
-                  "internalName": "witnessEmail",
-                  "validations": [
-                    {
-                      "name": "email"
-                    }
-                  ]
-                },
-                "conditions": [
-                  {
-                    "field": "Witnesses",
+                    "field": "witnesses",
                     "operator": "is",
                     "value": "true"
                   }
@@ -677,7 +651,7 @@
                 },
                 "conditions": [
                   {
-                    "field": "Witnesses",
+                    "field": "werePoliceInvolved",
                     "operator": "is",
                     "value": "true"
                   }
@@ -688,10 +662,10 @@
           {
             "cells": [
               {
-                "html": "",
+                "html": "I verify that I have read the content above and that the entered accident detail information is accurate",
                 "type": "html",
                 "info": {
-                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                  "requiredRead": true
                 }
               }
             ]
@@ -783,8 +757,12 @@
                   "width": 200,
                   "allowFullScreen": true,
                   "allowSigning": true,
-                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/signature/signature-diagram-transparent.png"
+                  "defaultValue": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABkKADAAQAAAABAAAAyAAAAADYDjhjAAAKoklEQVR4Ae3cW4xcdQHH8UIpKBe5qVAEbIFqgoaLgdCCJFyEGF5aApH6wEUDJPDQFyEhMWpjDLfAAzGQEHzxyUuiqRESEx8IElRAy8WCUUywUDAYBIqEci3+fpUTJ0OlpVnXme7nn3y7Z05nz5z97O75z5wz7bx5BgECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAIHtENhlO+4zDXfZNTv5kbRbemcadtg+EiAwJwV6zH0rvZw2T7tAD7g7w9grX8TydFDqN8cgQIDAJAr0mPtc+mn65yTu4AfZp53pFch++cIXJK9APshPgPsSIDCbAj3mvpleSlP/CmQ24TwWAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQGC2BObP1gN5HAIzKNA3TCxM+6a+aeL11HWfTn175Ey/E2/3bPPDqRc/R0cviHYfejHUBdFRGcsECBCYMIE+4fly+kn6Zbo33ZH2SOekp9LRaabHqdng6rT32IY7qdyelo2td5MAAQIEJkxgVfbnyXRZ+nw6O12a9k8HpJPTnmmmx0XZ4G/TR8c2vE9uv5BWjq13k8CcENhZ/iHhnPhm+SLnrYjB3amvOkZH/yeCnsq6P7098hf9B6Y9xdRTTy+mnop6LfW+nWg2pU4CXX41bUxbG91mT5P188ZHtzf6mP2d6oTWj91et9vxoTR8fh+zf9f96j72f1HoabdORqPbyk2DwOQKmEAm93tjz94rsCGrjk+HpadH/rrXH5ama9N5qZPF6Wl1+njqdZG704np0tR/Afz91HWfS8emXs+4Ot2VtjZ6YH9l7C/Gb3fi+GY6I/V3a33qNh9L16T+Twndzmnpq6mT0o3pE6mPvyZ9J3ViMwgQIEBgBgWOy7Z+nx5NX0p9Jj+ML2Shk0ovpvdA3fv0lcqS1M/7RXojfSodnB5PD6Uz06L04/RI6nWN8bEyK/6crkgXjnR5lv+ezk8dN6dfp14TOSL9IHVC6uRwW3ouXZd6+q379Lt3bx+ej2elJ9LFySBAgACB/4HAwmzzqrQhPZBOSx2dCPqMv6eEesDvRHNAGkYP2k+lvlOrE8if0lfSME7PQrfZVwPjo5NVTzmtST9KnWxabz+fVqROAk+mC9LHUh/j7PTXtCjdkjphzU8dX08Pp8WpX1P39XupE45BYCoEdpuKvbSTBP4j8Lcs3pR68L4+3ZqWp15DeCf1/0PrwbwTxOipoF5feC3tkjr68dktS//+o/ftK5R+/vjounVpVep2htFXQJ2oNqdOBJ28vpU6OXT7u6Zut/fr6KuYYfQVyqL0s9T7dt97v74yMghMhYAJZCq+TXZyKwJ/ybqLUyeKPtPvs/uOHog7mQwH7a7r6MF9/Oe9B/hh9CD+fqPb7DWPNow+1jBezUInqItS963b7sTyeur63VPvPzxO169NvWYzrHszy30cg8BUCIz+Ak3FDtvJOS1wUr76A0cEFmW5P8N9VdCDcOtB+I/p+HRMGsa5WTgo9aC+o2M40A+fP/z+dGLqq4uN6Zz0Uuo+9WNPZ41OHLm5Zfwmfx6VDk+9b+v2+m4tg8BUCIw/I5uKnbaTc1bg2/nKD0nrUw/Kn0l3vlsnl/489wB8T/pV+mG6L/XCeJ/Zv5iGSaD3HZazuGV5fF3Xd/TA/t9+V7q+p7g6eXwjfTednDakxenetDr12sdw/SOLW/4x5NJ8/Hnqffr1dDL5WnowGQQmXmD0F2jid9YOznmBwyJwSjoy9bRQrz/0nUw9rdRn+sele9Ibae/0xbQk9brCy+mOdFZ6Jp2a1qW+M6pj/3RCui/1dNToODQ3Ppl6YO+2h9HJ48z0hzRcT/lsls9Inch6KqsT2fPp2LQgdZ87WXT0tFr3o/vdx+z216ae3jIIECBA4P8g0AN1Gx2rc6Nv7d1zdKVlAgR2XKDPoAwCO5tAT3Ndmdanf6Ql6cJ0Q9qUDAIEZkDABDIDiDYxcQI9ZdQL6ctSf8Z7MfuS1GsNBgECBAgQ2KZA3zrb6wzzt3lPdyBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAYNYE/gVEQOyIlCKPYQAAAABJRU5ErkJggg=="
                 }
+              },
+              {
+                "html": "",
+                "type": "html"
               }
             ]
           }
