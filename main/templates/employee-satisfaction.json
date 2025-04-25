@@ -1,0 +1,424 @@
+{
+  "layout": {
+    "steps": [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Basic Information</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "employeeName",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "Employee Name",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "department",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "Department",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "title",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "Job Title",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "employmentLength",
+                  "type": "number",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "Employment Length",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Job Satisfaction</span></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "rateExperience",
+                  "isMulti": false,
+                  "options": [
+                    { "key": "1", "value": "1" },
+                    { "key": "2", "value": "2" },
+                    { "key": "3", "value": "3" },
+                    { "key": "4", "value": "4" },
+                    { "key": "5", "value": "5" },
+                    { "key": "6", "value": "6" },
+                    { "key": "7", "value": "7" },
+                    { "key": "8", "value": "8" },
+                    { "key": "9", "value": "9" },
+                    { "key": "10", "value": "10" }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "On a scale of 1-10, rate your satisfaction with your job",
+                "type": "column"
+              },
+              {
+                "html": "",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "whatDoYouEnjoyMost",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "What do you enjoy most about your job?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "whatCanBeImproved?",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "What would you like to see improved about your job?",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Basic Info & Job Satisfaction"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Work Environment&nbsp;<br></span></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "defaultValue": "Checked",
+                  "internalName": "doYouFeelValued",
+                  "off": "No",
+                  "on": "Yes",
+                  "type": "bool"
+                },
+                "title": "Do you feel valued at work",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "defaultValue": "Checked",
+                  "internalName": "doYouFeelSupported",
+                  "off": "No",
+                  "on": "Yes",
+                  "type": "bool"
+                },
+                "title": "Do you feel supported by your manager?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "conditions": [
+                  { "field": "doYouFeelValued", "operator": "is" },
+                  {
+                    "field": "doYouFeelValued",
+                    "joinOperator": "or",
+                    "negate": true,
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ],
+                "info": {
+                  "internalName": "ifNotWhy",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "If no, why don't you feel valued?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "conditions": [
+                  { "field": "doYouFeelSupported", "operator": "is" },
+                  {
+                    "field": "doYouFeelSupported",
+                    "joinOperator": "or",
+                    "negate": true,
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ],
+                "info": {
+                  "internalName": "ifNotSupportedWhy",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "If no, why don't you feel supported?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Compensation and Benefits</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "compensationSatisfaction",
+                  "isMulti": false,
+                  "options": [
+                    { "key": "Very happy", "value": "Very happy" },
+                    { "key": "Happy", "value": "Happy" },
+                    { "key": "Neutral", "value": "Neutral" },
+                    { "key": "Unhappy", "value": "Unhappy" },
+                    { "key": "Very unhappy", "value": "Very unhappy" }
+                  ],
+                  "type": "choice"
+                },
+                "title": "How happy are you with your compensation package?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "benifitsSatisfaction",
+                  "isMulti": false,
+                  "options": [
+                    { "key": "Very happy", "value": "Very happy" },
+                    { "key": "Happy", "value": "Happy" },
+                    { "key": "Neutral", "value": "Neutral" },
+                    { "key": "Unhappy", "value": "Unhappy" },
+                    { "key": "Very unhappy", "value": "Very unhappy" }
+                  ],
+                  "type": "choice"
+                },
+                "title": "How happy are you with the benefits offered?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "benefitsAdded",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "What benefits would you like to see added or improved?",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Work Environment & Benefits"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Career Growth<br></span></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "careerGrowth",
+                  "isMulti": false,
+                  "options": [
+                    { "key": "Great", "value": "Great" },
+                    { "key": "Good", "value": "Good" },
+                    { "key": "Neutral", "value": "Neutral" },
+                    { "key": "Bad", "value": "Bad" },
+                    { "key": "Terrible", "value": "Terrible" }
+                  ],
+                  "type": "choice"
+                },
+                "title": "How would you rate your opportunities for career growth?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "trainingReceived",
+                  "isMulti": false,
+                  "options": [
+                    { "key": "Strongly Agree", "value": "Strongly Agree" },
+                    { "key": "Agree", "value": "Agree" },
+                    { "key": "Neutral", "value": "Neutral" },
+                    { "key": "Disagree", "value": "Disagree" },
+                    { "key": "Strongly Disagree", "value": "Strongly Disagree" }
+                  ],
+                  "type": "choice"
+                },
+                "title": "Did you receive the training required to do your job?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "nextYearAchievements",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "What would you like to achieve in the next year at work?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Work/Life Balance</span></h2>",
+                "type": "html"
+              }
+            ],
+            "hidden": false
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "workLifeBalance",
+                  "isMulti": false,
+                  "options": [
+                    { "key": "Very good", "value": "Very good" },
+                    { "key": "Good", "value": "Good" },
+                    { "key": "Neutral", "value": "Neutral" },
+                    { "key": "Bad", "value": "Bad" },
+                    { "key": "Very Bad", "value": "Very Bad" }
+                  ],
+                  "type": "choice"
+                },
+                "title": "How would you rate your work life balance?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "workloadManageability",
+                  "isMulti": false,
+                  "options": [
+                    { "key": "Unbearable", "value": "Unbearable" },
+                    { "key": "Tough", "value": "Tough" },
+                    { "key": "Manageable", "value": "Manageable" },
+                    { "key": "Easy", "value": "Easy" }
+                  ],
+                  "type": "choice"
+                },
+                "title": "How manageable is your workload?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "balanceImprovement",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    { "name": "required" }
+                  ]
+                },
+                "title": "What could be done by the company to improve work/life balance?",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Growth & Work/Life Balance"
+      }
+    ],
+    "title": "Employee Satisfaction Survey"
+  },
+  "onSubmitMessage": "Your request has been submitted."
+}

@@ -1,0 +1,421 @@
+{
+  "layout": {
+    "steps": [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Basic Info</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "location",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Where do you live?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "gender",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Woman",
+                      "value": "Woman"
+                    },
+                    {
+                      "key": "Man",
+                      "value": "Man"
+                    },
+                    {
+                      "key": "Non-binary",
+                      "value": "Non-binary"
+                    },
+                    {
+                      "key": "Prefer not to say",
+                      "value": "Prefer not to say"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "What is your gender?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "age",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Under 18",
+                      "value": "Under 18"
+                    },
+                    {
+                      "key": "18-32",
+                      "value": "18-32"
+                    },
+                    {
+                      "key": "33-45",
+                      "value": "33-45"
+                    },
+                    {
+                      "key": "45-64",
+                      "value": "45-64"
+                    },
+                    {
+                      "key": "Over 65",
+                      "value": "Over 65"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "How old are you?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "annualIncome",
+                  "prefix": "$",
+                  "type": "number"
+                },
+                "title": "Annual Income",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "martialStatus",
+                  "off": "Unmarried",
+                  "on": "Married",
+                  "type": "bool"
+                },
+                "title": "Marital Status",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "educationLevel",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "High School",
+                      "value": "High School"
+                    },
+                    {
+                      "key": "Bachelors",
+                      "value": "Bachelors"
+                    },
+                    {
+                      "key": "Masters",
+                      "value": "Masters"
+                    },
+                    {
+                      "key": "Doctorate",
+                      "value": "Doctorate"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Education Level",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Basic Info"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Product Interest &amp; Usage</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "useProductChance",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Very Likely",
+                      "value": "Very Likely"
+                    },
+                    {
+                      "key": "Likely",
+                      "value": "Likely"
+                    },
+                    {
+                      "key": "Neutral",
+                      "value": "Neutral"
+                    },
+                    {
+                      "key": "Unlikely",
+                      "value": "Unlikely"
+                    },
+                    {
+                      "key": "Very Unlikely",
+                      "value": "Very Unlikely"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "How likely are you to use [product]?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "similarProductUsage",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Often",
+                      "value": "Often"
+                    },
+                    {
+                      "key": "Sometimes",
+                      "value": "Sometimes"
+                    },
+                    {
+                      "key": "Never",
+                      "value": "Never"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "How often do you use similar products?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "whatWouldMakeYouUse",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "What would make you more likely to use  [product]?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "barriersToUsage",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "What are the biggest barriers to you using [product]?",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Product Interest & Usage"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Pricing and Value</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "appropriatePricing",
+                  "prefix": "$",
+                  "type": "number"
+                },
+                "title": "What price would you consider appropriate for [product]?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "pricingImportance",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Very Important",
+                      "value": "Very Important"
+                    },
+                    {
+                      "key": "Important",
+                      "value": "Important"
+                    },
+                    {
+                      "key": "Neutral",
+                      "value": "Neutral"
+                    },
+                    {
+                      "key": "Unimportant",
+                      "value": "Unimportant"
+                    },
+                    {
+                      "key": "Very Unimportant",
+                      "value": "Very Unimportant"
+                    }
+                    
+                  ],
+                  "type": "choice"
+                },
+                "title": "How important is pricing in your decision to use [product]?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Competetive Landscape</span></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "currentProductsUsed",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "What products do you currently use for this need?",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "currentSolutionSatisfaction",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Very Satisfied",
+                      "value": "Very Satisfied"
+                    },
+                    {
+                      "key": "Satisfied",
+                      "value": "Satisfied"
+                    },
+                    {
+                      "key": "Neutral",
+                      "value": "Neutral"
+                    },
+                    {
+                      "key": "Dissatisfied",
+                      "value": "Dissatisfied"
+                    },
+                    {
+                      "key": "Very Dissatisfied",
+                      "value": "Very Dissatisfied"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "How satisfied are you with your current solution?",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "whatWouldMakeYouSwitch",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "What would make you switch from your current solution?",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Pricing & Competition"
+      }
+    ],
+    "title": "Market Research Form"
+  },
+  "onSubmitMessage": "Your request has been submitted."
+}

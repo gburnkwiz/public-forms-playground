@@ -1,0 +1,304 @@
+{
+  "layout": {
+    "steps": [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Basic Information</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "reportedBy",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Reported By",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "locationIncident",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Location of Incident",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "incidentDate",
+                  "showTime": true,
+                  "type": "date",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Date & time of incident",
+                "type": "column"
+              },
+              {
+                "html": "",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "witnesses",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Witnesses",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Basic Info"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Incident Details</span></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "typeOfIncident",
+                  "isMulti": false,
+                  "options": [
+                    {
+                      "key": "Workplace Injury",
+                      "value": "Workplace Injury"
+                    },
+                    {
+                      "key": "Property Damage",
+                      "value": "Property Damage"
+                    },
+                    {
+                      "key": "Security Breach",
+                      "value": "Security Breach"
+                    },
+                    {
+                      "key": "Safety Violation",
+                      "value": "Safety Violation"
+                    },
+                    {
+                      "key": "Harassment/Discrimination",
+                      "value": "Harassment/Discrimination"
+                    },
+                    {
+                      "key": "Equipment Malfunction",
+                      "value": "Equipment Malfunction"
+                    },
+                    {
+                      "key": "Other",
+                      "value": "Other"
+                    }
+                  ],
+                  "type": "choice",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Type of Incident",
+                "type": "column"
+              },
+              {
+                "conditions": [
+                  {
+                    "field": "Type_x0020_of_x0020_Incident",
+                    "operator": "is",
+                    "value": "Other"
+                  }
+                ],
+                "info": {
+                  "internalName": "ifOtherClassify",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "If other, classify the incident",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "detailedIncidentDescription",
+                  "mode": "multiline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Detailed description of incident",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type":"column",
+                "title":"Annotated Evidence",
+                "info":{
+                  "type": "canvas",
+                  "internalName": "Canvas_1",
+                  "allowUpload": true,
+                  "allowFullScreen":true
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "incidentEvidence",
+                  "isMulti": true,
+                  "type": "file",
+                  "fileTypes": ["png", "jpg", "gif", "bmp", "svg", "webp", "docx", "doc", "pdf", "rtf", "txt", "odt"],
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Evidence files",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Injury &amp; Damage Assesment</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "wasAnyoneInjured",
+                  "off": "No",
+                  "on": "Yes",
+                  "type": "bool"
+                },
+                "title": "Was anyone injured?",
+                "type": "column"
+              },
+              {
+                "conditions": [
+                  {
+                    "field": "Was_x0020_anyone_x0020_injured_x",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ],
+                "info": {
+                  "internalName": "injuryDescription",
+                  "mode": "singleline",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Description of injuries",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "wasTherePropertyDamage",
+                  "off": "No",
+                  "on": "Yes",
+                  "type": "bool"
+                },
+                "title": "Was any property damaged?",
+                "type": "column"
+              },
+              {
+                "conditions": [
+                  {
+                    "field": "Was_x0020_any_x0020_property_x00",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ],
+                "info": {
+                  "internalName": "damageEstimate",
+                  "prefix": "$",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Estimated damage cost",
+                "type": "column"
+              }
+            ]
+          }
+        ],
+        "title": "Details"
+      }
+    ],
+    "title": "Incident Report"
+  },
+  "onSubmitMessage": "Your request has been submitted."
+}
