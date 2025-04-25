@@ -1,4 +1,5 @@
 {
+  "schemaVersion": "1",
   "layout": {
     "title": "Patient Intake Form",
     "steps": [
@@ -7,7 +8,7 @@
           {
             "cells": [
               {
-                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "html": "<img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"><h2><span style=\"color: rgb(74, 134, 232);\">Patient Information</span><br></h2>",
                 "type": "html"
               }
             ]
@@ -113,9 +114,9 @@
             "cells": [
               {
                 "type": "html",
-                "html": "",
+                "html": "I confirm that the patient information details I entered are true, complete, and accurate to the best of my knowledge",
                 "info": {
-                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                  "requiredRead": true
                 }
               }
             ]
@@ -128,7 +129,7 @@
           {
             "cells": [
               {
-                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "html": "<img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"><h2><span style=\"color: rgb(74, 134, 232);\">Insurance Information</span></h2>",
                 "type": "html"
               }
             ]
@@ -296,9 +297,9 @@
             "cells": [
               {
                 "type": "html",
-                "html": "",
+                "html": "I confirm that the insurance information details I entered are true, complete, and accurate to the best of my knowledge",
                 "info": {
-                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                  "requiredRead": true
                 }
               }
             ]
@@ -311,7 +312,7 @@
           {
             "cells": [
               {
-                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "html": "<img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"><h2><span style=\"color: rgb(74, 134, 232);\">Emergency Contact Information</span></h2>",
                 "type": "html"
               }
             ]
@@ -386,9 +387,9 @@
             "cells": [
               {
                 "type": "html",
-                "html": "",
+                "html": "I confirm that the emergency contact information details I entered are true, complete, and accurate to the best of my knowledge",
                 "info": {
-                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                  "requiredRead": true
                 }
               }
             ]
@@ -401,7 +402,7 @@
           {
             "cells": [
               {
-                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "html": "<img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"><h2><span style=\"color: rgb(74, 134, 232);\">Medical History Information</span></h2>",
                 "type": "html"
               }
             ]
@@ -569,9 +570,9 @@
             "cells": [
               {
                 "type": "html",
-                "html": "",
+                "html": "I confirm that the medical history information details I entered are true, complete, and accurate to the best of my knowledge",
                 "info": {
-                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                  "requiredRead": true
                 }
               }
             ]
@@ -584,7 +585,7 @@
           {
             "cells": [
               {
-                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "html": "<img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\">",
                 "type": "html"
               }
             ]
@@ -592,66 +593,91 @@
           {
             "cells": [
               {
-                "title": "Describe your issue",
-                "type": "column",
                 "info": {
                   "internalName": "issueDescription",
-                  "type": "text",
-                  "mode": "multiline"
-                }
+                  "mode": "multiline",
+                  "type": "text"
+                },
+                "title": "Describe your issue",
+                "type": "column"
               }
             ]
           },
           {
             "cells": [
               {
-                "title": "Use this diagram to aid your description (Fullscreen as necessary)",
-                "type": "column",
+                "conditions": [
+                  {
+                    "field": "Gender",
+                    "operator": "is",
+                    "value": "Man"
+                  }
+                ],
                 "info": {
-                  "internalName": "diagramAid",
-                  "type": "canvas",
-                  "height": 300,
+                  "allowFullScreen": true,
                   "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/body-frontal/body-frontal-diagram-transparent.png",
-                  "allowFullScreen": true
-                }
+                  "height": 300,
+                  "internalName": "diagramAidMale",
+                  "type": "canvas"
+                },
+                "title": "Use this diagram to aid your description (Fullscreen as necessary)",
+                "type": "column"
               }
             ]
           },
           {
             "cells": [
               {
-                "title": "If it would be useful, submit a picture of your wound",
-                "type": "column",
+                "conditions": [
+                  {
+                    "field": "Gender",
+                    "operator": "is",
+                    "value": "Woman"
+                  }
+                ],
                 "info": {
+                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/body-frontal/body-frontal-fem-diagram-transparent.png",
+                  "height": 300,
+                  "internalName": "diagramAidFemale",
+                  "type": "canvas"
+                },
+                "title": "Use this diagram to aid your description (Fullscreen as necessary)",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "fileTypes": ["png", "jpg", "gif", "bmp", "svg", "webp"],
                   "internalName": "woundImage",
-                  "type": "file",
                   "isMulti": true,
-                  "fileTypes": [
-                    "png",
-                    "jpg",
-                    "gif",
-                    "bmp",
-                    "svg",
-                    "webp"
-                  ]
-                }
+                  "type": "file"
+                },
+                "title": "If it would be useful, submit a picture of your wound",
+                "type": "column"
               }
-            ]
+            ],
+            "hidden": false
           },
           {
             "cells": [
               {
-                "title": "I state that I fully understood all the questions, received needed explanations and that the data in this questionnaire is authentic",
-                "type": "column",
                 "info": {
+                  "allowSigning": true,
+                  "defaultValue": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABkKADAAQAAAABAAAAyAAAAADYDjhjAAAKoklEQVR4Ae3cW4xcdQHH8UIpKBe5qVAEbIFqgoaLgdCCJFyEGF5aApH6wEUDJPDQFyEhMWpjDLfAAzGQEHzxyUuiqRESEx8IElRAy8WCUUywUDAYBIqEci3+fpUTJ0OlpVnXme7nn3y7Z05nz5z97O75z5wz7bx5BgECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAIHtENhlO+4zDXfZNTv5kbRbemcadtg+EiAwJwV6zH0rvZw2T7tAD7g7w9grX8TydFDqN8cgQIDAJAr0mPtc+mn65yTu4AfZp53pFch++cIXJK9APshPgPsSIDCbAj3mvpleSlP/CmQ24TwWAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQGC2BObP1gN5HAIzKNA3TCxM+6a+aeL11HWfTn175Ey/E2/3bPPDqRc/R0cviHYfejHUBdFRGcsECBCYMIE+4fly+kn6Zbo33ZH2SOekp9LRaabHqdng6rT32IY7qdyelo2td5MAAQIEJkxgVfbnyXRZ+nw6O12a9k8HpJPTnmmmx0XZ4G/TR8c2vE9uv5BWjq13k8CcENhZ/iHhnPhm+SLnrYjB3amvOkZH/yeCnsq6P7098hf9B6Y9xdRTTy+mnop6LfW+nWg2pU4CXX41bUxbG91mT5P188ZHtzf6mP2d6oTWj91et9vxoTR8fh+zf9f96j72f1HoabdORqPbyk2DwOQKmEAm93tjz94rsCGrjk+HpadH/rrXH5ama9N5qZPF6Wl1+njqdZG704np0tR/Afz91HWfS8emXs+4Ot2VtjZ6YH9l7C/Gb3fi+GY6I/V3a33qNh9L16T+Twndzmnpq6mT0o3pE6mPvyZ9J3ViMwgQIEBgBgWOy7Z+nx5NX0p9Jj+ML2Shk0ovpvdA3fv0lcqS1M/7RXojfSodnB5PD6Uz06L04/RI6nWN8bEyK/6crkgXjnR5lv+ezk8dN6dfp14TOSL9IHVC6uRwW3ouXZd6+q379Lt3bx+ej2elJ9LFySBAgACB/4HAwmzzqrQhPZBOSx2dCPqMv6eEesDvRHNAGkYP2k+lvlOrE8if0lfSME7PQrfZVwPjo5NVTzmtST9KnWxabz+fVqROAk+mC9LHUh/j7PTXtCjdkjphzU8dX08Pp8WpX1P39XupE45BYCoEdpuKvbSTBP4j8Lcs3pR68L4+3ZqWp15DeCf1/0PrwbwTxOipoF5feC3tkjr68dktS//+o/ftK5R+/vjounVpVep2htFXQJ2oNqdOBJ28vpU6OXT7u6Zut/fr6KuYYfQVyqL0s9T7dt97v74yMghMhYAJZCq+TXZyKwJ/ybqLUyeKPtPvs/uOHog7mQwH7a7r6MF9/Oe9B/hh9CD+fqPb7DWPNow+1jBezUInqItS963b7sTyeur63VPvPzxO169NvWYzrHszy30cg8BUCIz+Ak3FDtvJOS1wUr76A0cEFmW5P8N9VdCDcOtB+I/p+HRMGsa5WTgo9aC+o2M40A+fP/z+dGLqq4uN6Zz0Uuo+9WNPZ41OHLm5Zfwmfx6VDk+9b+v2+m4tg8BUCIw/I5uKnbaTc1bg2/nKD0nrUw/Kn0l3vlsnl/489wB8T/pV+mG6L/XCeJ/Zv5iGSaD3HZazuGV5fF3Xd/TA/t9+V7q+p7g6eXwjfTednDakxenetDr12sdw/SOLW/4x5NJ8/Hnqffr1dDL5WnowGQQmXmD0F2jid9YOznmBwyJwSjoy9bRQrz/0nUw9rdRn+sele9Ibae/0xbQk9brCy+mOdFZ6Jp2a1qW+M6pj/3RCui/1dNToODQ3Ppl6YO+2h9HJ48z0hzRcT/lsls9Inch6KqsT2fPp2LQgdZ87WXT0tFr3o/vdx+z216ae3jIIECBA4P8g0AN1Gx2rc6Nv7d1zdKVlAgR2XKDPoAwCO5tAT3Ndmdanf6Ql6cJ0Q9qUDAIEZkDABDIDiDYxcQI9ZdQL6ctSf8Z7MfuS1GsNBgECBAgQ2KZA3zrb6wzzt3lPdyBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAYNYE/gVEQOyIlCKPYQAAAABJRU5ErkJggg==",
+                  "height": 200,
                   "internalName": "signature",
                   "type": "canvas",
-                  "height": 200,
-                  "width": 200,
-                  "allowFullScreen": true,
-                  "allowSigning": true,
-                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/signature/signature-diagram-transparent.png"
-                }
+                  "width": 200
+                },
+                "title": "Sign here",
+                "type": "column"
+              },
+              {
+                "html": "",
+                "type": "html"
               }
             ]
           }
